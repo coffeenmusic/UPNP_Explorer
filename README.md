@@ -80,9 +80,9 @@ Step 5:
 upnp.request_action(CTRL_URL, SERVICE_TYPE) # ACTION_NAME & INPUT_ARGS defined from SCPD.define_action
 upnp.print_xml(upnp.SOAP.response)
 ```
-><?xml version="1.0" ?>
-<s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
-	<s:Body>
-		<u:SetMuteResponse xmlns:u="urn:schemas-upnp-org:service:RenderingControl:1"/>
-	</s:Body>
-</s:Envelope>
+><?xml version="1.0" ?>  
+<s:Envelope s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">  
+&nbsp;&nbsp;&nbsp;&nbsp;<s:Body>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u:SetMuteResponse xmlns:u="urn:schemas-upnp-org:service:RenderingControl:1"/>  
+&nbsp;&nbsp;&nbsp;&nbsp;</s:Body>  
+</s:Envelope>  
