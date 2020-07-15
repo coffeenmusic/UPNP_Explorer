@@ -1,4 +1,4 @@
-# References
+# :books:References
 - ["Exploring UPnP with Python" - Electric Monk](https://www.electricmonk.nl/log/2016/07/05/exploring-upnp-with-python/)
   - A lot of the SSDP code is a direct copy from this reference
 - [upnpclient](https://github.com/flyte/upnpclient/blob/develop/upnpclient/soap.py)
@@ -7,9 +7,10 @@
 # Motivation
 I just wanted to play around with UPNP device discovery. I'm sure you can find better code out there, but I do like the way I condensed down the Action and Argument definitions so it is really easy to see what is available.
 
-Look at the Example.ipynb to see the commands necessary. The jupyter notebook is more descriptive than the README overview below.
+# :abc: Getting Started
+Look at the Example.ipynb to see the commands necessary. The jupyter notebook is more descriptive than the README overview below. Also the output looks much cleaner in the Jupyter Notebook.
 
-# Quick Overview
+# :scroll: Quick Overview
 Step 1: Broadcast
 ```
 upnp = UPNP_Explorer() # Broadcast to UPNP Devices
