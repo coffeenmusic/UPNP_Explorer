@@ -46,25 +46,25 @@ Step 4a: Define Actions and Input Arguments
 ```
 upnp.SCPD.pretty_print_actions()
 ```
->    ListPresets(InstanceID)   
-&nbsp;&nbsp;&nbsp;&nbsp;Returns: (CurrentPresetNameList)
-SelectPreset(InstanceID, PresetName)
-GetMute(InstanceID, Channel)
-&nbsp;&nbsp;&nbsp;&nbsp;Returns: (CurrentMute)
-SetMute(InstanceID, Channel, DesiredMute)
-GetVolume(InstanceID, Channel)
-&nbsp;&nbsp;&nbsp;&nbsp;Returns: (CurrentVolume)
-    SetVolume(InstanceID, Channel, DesiredVolume)
+>    ListPresets(InstanceID)  
+&nbsp;&nbsp;&nbsp;&nbsp;Returns: (CurrentPresetNameList)  
+SelectPreset(InstanceID, PresetName)  
+GetMute(InstanceID, Channel)  
+&nbsp;&nbsp;&nbsp;&nbsp;Returns: (CurrentMute)  
+SetMute(InstanceID, Channel, DesiredMute)  
+GetVolume(InstanceID, Channel)  
+&nbsp;&nbsp;&nbsp;&nbsp;Returns: (CurrentVolume)  
+    SetVolume(InstanceID, Channel, DesiredVolume)  
 ```
 upnp.SCPD.print_action_arg_desc(ACTION_NAME)
 ```
->InstanceID
-&nbsp;&nbsp;&nbsp;&nbsp;dataType: ui4
-Channel
-&nbsp;&nbsp;&nbsp;&nbsp;dataType: string
-&nbsp;&nbsp;&nbsp;&nbsp;allowedValueList: Master
-DesiredMute
-&nbsp;&nbsp;&nbsp;&nbsp;dataType: boolean
+>InstanceID  
+&nbsp;&nbsp;&nbsp;&nbsp;dataType: ui4  
+Channel  
+&nbsp;&nbsp;&nbsp;&nbsp;dataType: string  
+&nbsp;&nbsp;&nbsp;&nbsp;allowedValueList: Master  
+DesiredMute  
+&nbsp;&nbsp;&nbsp;&nbsp;dataType: boolean  
 ```
 argument_inputs = upnp.SCPD.define_action('SetMute')
 print(upnp.SCPD.input_args)
