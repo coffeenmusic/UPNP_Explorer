@@ -16,15 +16,15 @@ Step 1: Broadcast
 upnp = UPNP_Explorer() # Broadcast to UPNP Devices
 upnp.SSDP.print_servers()
 ```
->Samsung-Linux/4.1, UPnP/1.0, Samsung_UPnP_SDK/1.0_0
-http/1.1 200 ok: HTTP/1.1 200 OK
-cache-control: max-age=1800
-date: Wed, 15 Jul 2020 18:01:31 GMT
-location: http://192.168.1.14:9197/dmr
-st: upnp:rootdevice
-usn: uuid:036cb031-f5f8-4831-bcd7-c0259ee25740::upnp:rootdevice
-content-length: 0
-bootid.upnp.org: 4
+>Samsung-Linux/4.1, UPnP/1.0, Samsung_UPnP_SDK/1.0_0  
+http/1.1 200 ok: HTTP/1.1 200 OK  
+cache-control: max-age=1800  
+date: Wed, 15 Jul 2020 18:01:31 GMT  
+location: http://192.168.1.14:9197/dmr  
+st: upnp:rootdevice  
+usn: uuid:036cb031-f5f8-4831-bcd7-c0259ee25740::upnp:rootdevice  
+content-length: 0  
+bootid.upnp.org: 4  
 	
 Step 2: Define Server
 ```
