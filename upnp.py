@@ -86,13 +86,13 @@ class UPNP_SSDP:
             pass
         
     def get_response_dict(self, data_str):
-		"""
-		Formats SSDP Response from UPNP Devices to a dictionary of server properties
-		- data_str: device response
-		
-		return server_name, response_dict
-		"""
-	
+        """
+        Formats SSDP Response from UPNP Devices to a dictionary of server properties
+        - data_str: device response
+        
+        return server_name, response_dict
+        """
+    
         property_dict = {}
         server = ''
         for line in data_str.split('\r\n'):
@@ -108,13 +108,13 @@ class UPNP_SSDP:
         return server, property_dict
     
     def get_property_dict(self, server_name, server_idx=0):
-	    """
-		- server_name: server name does not have to match exacty, but the entire search str must exist in servers' key
-		- server_idx: if more than one server are found with server_name, then the index is used to pick which server
-		
-		returns all properties for given server as property dictionary
-		"""
-	
+        """
+        - server_name: server name does not have to match exacty, but the entire search str must exist in servers' key
+        - server_idx: if more than one server are found with server_name, then the index is used to pick which server
+        
+        returns all properties for given server as property dictionary
+        """
+    
         assert len(self.servers) > 0, 'Error: servers dictionary empty.'
         server_key = [k for k in self.servers.keys() if server_name.lower() in k.lower()]
         assert len(server_key) > 0, 'Error: No server with specified key word found.'
@@ -175,18 +175,18 @@ class UPNP_SCPD:
         return self.url_list
     
     def _filter_etree(self, obj, filter_txt='', filter_tag='', filter_prt_tag='', exact=False, results=None):
-		"""
-		Input an etree element and return that element filtering the tag, parent tag, and tag's associated text value
-		- obj: Element tree object created from xml
-		- filter_txt: gets objects that contain or match this text
-		- filter_tag: gets objects that contain or match this tag
-		- filter_prt_tag: gets objects that contain or match the parent tag
-		- exact: False=filter string is in element value/tag, True=filter string exactly matches element value/tag
-		- results: a list of filtered element objects. Only used for recursion not used outside that.
-		
-		return results: list of elements that match filter settings
-		"""
-	
+        """
+        Input an etree element and return that element filtering the tag, parent tag, and tag's associated text value
+        - obj: Element tree object created from xml
+        - filter_txt: gets objects that contain or match this text
+        - filter_tag: gets objects that contain or match this tag
+        - filter_prt_tag: gets objects that contain or match the parent tag
+        - exact: False=filter string is in element value/tag, True=filter string exactly matches element value/tag
+        - results: a list of filtered element objects. Only used for recursion not used outside that.
+        
+        return results: list of elements that match filter settings
+        """
+    
         if results == None:
             results = []
 
@@ -206,13 +206,13 @@ class UPNP_SCPD:
         return results
     
     def get_action_arguments(self, action_name, arg_dir=None):
-		"""
-			- action_name: action that you would like all arguments for
-			- arg_dir: None, 'in', 'out'
-			
-			return arguments associated with action name that are either inputs, outputs, or both depending on arg_dir
-		"""
-	
+        """
+            - action_name: action that you would like all arguments for
+            - arg_dir: None, 'in', 'out'
+            
+            return arguments associated with action name that are either inputs, outputs, or both depending on arg_dir
+        """
+    
         action = self._filter_etree(self.service_root, filter_tag='name', filter_prt_tag='action', filter_txt=action_name)
         if len(action) == 0:
             return
